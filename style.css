@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --bg-primary: hsl(0, 100%, 74%);
+  --bg-secondary: hsl(154, 59%, 51%);
+  --bg-accent: hsl(248, 32%, 49%);
+  --clr-neutral-700: hsl(249, 10%, 26%);
+  --clr-neutral-400: hsl(246, 25%, 77%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: var(--bg-primary);
+  background-image: url(./images/bg-intro-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  padding-inline: 2rem;
+  padding-block: 4rem;
+}
+
+/* 
+main {
+  min-height: calc(100vh - 16px);
+}
+ */
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  color: white;
+  text-align: center;
+}
+
+.banner {
+  background-color: var(--bg-accent);
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  margin-block: 1rem;
+  border-radius: 0.5em;
+}
+
+.banner-text {
+  font-size: 1.25rem;
+}
+
+.banner span {
+  font-weight: 600;
+}
+
+.terms {
+  color: var(--clr-neutral-400);
+  font-size: 11px;
+  text-align: center;
+}
+
+.terms span {
+  color: var(--bg-primary);
+  font-weight: 500;
+}
+
+.form {
+  background-color: white;
+  border-radius: 0.5em;
+  padding: 2rem;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.25em;
+  color: var(--clr-neutral-700);
+}
+
+.btn {
+  background-color: var(--bg-secondary);
+  width: 100%;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 0.5em;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("./images/bg-intro-desktop.png");
+  }
+
+  .container {
+    max-width: 1110px;
+    margin-inline: auto;
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .intro {
+    text-align: left;
+  }
+
+  .banner-text {
+    font-size: 1rem;
+  }
+
+  .sign-up {
+    width: max-content;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .terms {
+    font-size: 10px;
+  }
+}
