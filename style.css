@@ -45,6 +45,10 @@ h1 {
   margin-bottom: 1rem;
 }
 
+small {
+  font-size: 0.5rem;
+}
+
 .intro {
   color: white;
   text-align: center;
