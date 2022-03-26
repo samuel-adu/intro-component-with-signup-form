@@ -5,9 +5,9 @@
 }
 
 :root {
-  --bg-primary: hsl(0, 100%, 74%);
-  --bg-secondary: hsl(154, 59%, 51%);
-  --bg-accent: hsl(248, 32%, 49%);
+  --clr-primary: hsl(0, 100%, 74%);
+  --clr-secondary: hsl(154, 59%, 51%);
+  --clr-accent: hsl(248, 32%, 49%);
   --clr-neutral-700: hsl(249, 10%, 26%);
   --clr-neutral-400: hsl(246, 25%, 77%);
 }
@@ -16,7 +16,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background-color: var(--bg-primary);
+  background-color: var(--clr-primary);
   background-image: url(./images/bg-intro-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,11 +27,17 @@ body {
   padding-block: 4rem;
 }
 
-/* 
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
 main {
   min-height: calc(100vh - 16px);
 }
- */
 
 h1 {
   font-size: 2rem;
@@ -45,7 +51,7 @@ h1 {
 }
 
 .banner {
-  background-color: var(--bg-accent);
+  background-color: var(--clr-accent);
   text-align: center;
   color: white;
   padding: 1rem;
@@ -68,7 +74,7 @@ h1 {
 }
 
 .terms span {
-  color: var(--bg-primary);
+  color: var(--clr-primary);
   font-weight: 500;
 }
 
@@ -78,24 +84,63 @@ h1 {
   padding: 2rem;
 }
 
-input {
-  width: 100%;
+.form-control {
+  position: relative;
+  padding-bottom: 1rem;
   margin-bottom: 1rem;
+}
+
+.form-control input {
+  display: block;
+  width: 100%;
   padding: 1rem;
   border-radius: 0.25em;
   color: var(--clr-neutral-700);
+  font-weight: 600;
+  border: 1px solid var(--clr-neutral-400);
+}
+
+.form-control.success input {
+  border-color: var(--clr-secondary);
+}
+
+.form-control.error input {
+  border-color: var(--clr-primary);
+}
+
+.form-control img {
+  position: absolute;
+  right: 1rem;
+  top: 0.8rem;
+  visibility: hidden;
+}
+
+.form-control.error img {
+  visibility: visible;
+}
+
+.form-control small {
+  color: var(--clr-primary);
+  position: absolute;
+  right: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
 }
 
 .btn {
-  background-color: var(--bg-secondary);
+  background-color: var(--clr-secondary);
   width: 100%;
-  display: inline-block;
+  display: block;
   padding: 1rem;
   border-radius: 0.5em;
   color: white;
   text-transform: uppercase;
   margin-bottom: 1rem;
   cursor: pointer;
+  border: 3px solid var(--clr-secondary);
 }
 
 @media screen and (min-width: 768px) {
@@ -123,7 +168,7 @@ input {
   }
 
   .sign-up {
-    width: max-content;
+    width: 100%;
   }
 
   h1 {
